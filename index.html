@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tower of Hanoi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section id="borda">
+
+      <header>
+        <h1>Tower of Hanoi</h1>
+      </header>
+
+      <section id="mensagemVitoria"></section>
+      <label id="victory" class="vtr"><label id="contadorSegReset" class="vtr"></label></label>
+      
+      <div class="dadosDaTorre">
+         
+               <div id="data" >
+                      <label class = "textMoviments">Movement count:</label>
+                      <label class ="movimentos">0</label>
+                      
+                      <div class = "dificuldade" id="escolhadificuldade">
+
+                                <label class = "qtdDisksTotal">Choose the number of disks</label>
+                              <span>
+                                <button class = "pure-material-button-contained qtdDisks" id="qtdDisks3">3</button>
+                                <button class = "pure-material-button-contained qtdDisks" id="qtdDisks4">4</button>
+                                <button class = "pure-material-button-contained qtdDisks" id="qtdDisks5">5</button>
+                                <button class = "pure-material-button-contained qtdDisks" id="qtdDisks6">6</button>
+                              </span>
+
+                      </div>
+
+                    <button class="restart btn striped-shadow">Restart</button>
+
+                </div>
+              
+              
+              <section class = "teladastorres">
+
+                
+              </section>
+          
+                    <div class="indiceTorres">
+                        <label >First tower</label>
+                        <label >Second tower</label>
+                        <label >Third tower</label>
+                    </div>
+      </div>
+      <main class = "cabecalho">     
+               <div>
+                  <button class="btn striped-shadow dark btnStart"><span>START</span></button>
+              </div>          
+      </main> 
+
+  </section>
+
+    <script src="/script.js"></script>
+</body>
+</html>

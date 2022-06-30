@@ -1,0 +1,707 @@
+@import 'https://fonts.googleapis.com/css?family=Bungee+Shade';
+
+html{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(/background.png);
+    background-repeat: no-repeat;
+    background-position: inherit;
+}
+
+.indiceTorres{
+    display: none;
+}
+
+.vtr{
+    display: none;
+}
+
+body{
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    color: #275070;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+    flex-wrap: wrap;
+}
+
+.tituloH1{
+    width: 100%;
+    font-size: 30px;
+    font-family: 'Bungee Shade';
+    letter-spacing: 28px;
+    transition: all 2s ease-in;
+    border-bottom: 10px solid #275070;
+    border-top: 10px solid #275070;
+}
+
+.headerTitutlo {
+    transition: all ease 2s;
+    transform: translateY(-30px);
+}
+
+.teladastorres{
+   display: none;
+   width: 80%;
+   justify-content: center;
+   flex-wrap: wrap;
+    margin-top: 80px;
+    flex-direction: column;
+    align-items: center;
+}
+
+#primeiraTorre {
+    margin-bottom: 5%;
+}
+
+#terceiraTorre {
+    margin-top: 5%;
+}
+
+h1{
+    font-family: 'Bungee Shade';
+    font-weight: 700;
+    font-size: 40px;
+    letter-spacing: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.movimentos{
+    font-weight: 700;
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    font-size: 25px;
+    width: 50px;
+    height: 55px;
+}
+
+.textMoviments {
+    display: flex;
+    justify-content: center;
+    font-size: 21px;
+    align-items: center;
+    width: 190px;
+    height: 55px;
+    border-top-left-radius: 10px;
+    margin-top: 20px;
+}
+
+.inputDisk {
+    padding-left: 20px;
+    width: 40px;
+    height: 54px;
+    font-size: 25px;
+}
+
+.dadosDaTorre{
+    display: none;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.QtdDisks {
+    width: 250px;
+    height: 60px;
+    font-size: 20px;
+}
+
+
+.torres {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 16px;
+    height: 250px;
+    background-color: black;
+    cursor: pointer;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}  
+
+.disco:hover {
+    transition: all ease 0.5s;
+    transform: translateY(-5px)
+}
+
+.disco {
+    border: black solid 4px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#disco0 {
+    width: 170px;
+    height: 30px;
+}
+
+
+#disco1 {
+    width: 150px;
+    height: 30px;
+}
+
+#disco2 {
+    width: 120px;
+    height: 30px;
+}
+
+#disco3 {
+    width: 90px;
+    height: 30px;
+}
+
+#disco4 {
+    width: 70px;
+    height: 30px;
+}
+
+#disco5 {
+    width: 50px;
+    height: 30px;
+}
+
+#disco6 {
+    width: 30px;
+    height: 30px;
+}
+
+#disco7 {
+    width: 30px;
+    height: 50px;
+}
+
+.dificuldade{
+    display: flex;
+    flex-direction: column;  
+    justify-content: space-around;;
+    flex-wrap: wrap;
+    width: 300px;
+    
+    align-items: center;
+    border-radius: 10px;
+}
+
+.qtdDisksTotal{
+    margin-bottom: 15px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.qtdDisks{
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 4px;
+    padding: 0 16px;
+    min-width: 64px;
+    height: 36px;
+    vertical-align: middle;
+    text-align: center;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    color: #275070;
+    background-color: transparent;
+    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+    font-family: var(--pure-material-font, "Roboto", "Segoe UI", BlinkMacSystemFont, system-ui, -apple-system);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 36px;
+    overflow: hidden;
+    outline: none;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+}
+
+.pure-material-button-contained::-moz-focus-inner {
+    border: none;
+}
+
+/* Overlay */
+.pure-material-button-contained::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(var(--pure-material-onprimary-rgb, 255, 255, 255));
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+/* Ripple */
+.pure-material-button-contained::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 50%;
+    padding: 50%;
+    width: 32px; /* Safari */
+    height: 32px; /* Safari */
+    background-color: rgb(var(--pure-material-onprimary-rgb, 255, 255, 255));
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+    transition: opacity 1s, transform 0.5s;
+}
+
+/* Hover, Focus */
+.pure-material-button-contained:hover,
+.pure-material-button-contained:focus {
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.pure-material-button-contained:hover::before {
+    opacity: 0.08;
+}
+
+.pure-material-button-contained:focus::before {
+    opacity: 0.24;
+}
+
+.pure-material-button-contained:hover:focus::before {
+    opacity: 0.3;
+}
+
+/* Active */
+.pure-material-button-contained:active {
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2), 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.pure-material-button-contained:active::after {
+    opacity: 0.32;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0s;
+}
+
+/* Disabled */
+.pure-material-button-contained:disabled {
+    color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38);
+    background-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.12);
+    box-shadow: none;
+    cursor: initial;
+}
+
+.pure-material-button-contained:disabled::before {
+    opacity: 0;
+}
+
+.pure-material-button-contained:disabled::after {
+    opacity: 0;
+}
+
+
+.restart {
+    font-size: 21px;
+    width: 200px;
+    height: 55px;
+    margin-left: 80px;
+    color: #275070;
+    border-color: #275070;
+    border: 3px solid ;
+}
+
+.striped-shadow {
+    overflow: visible;
+    border: 0;
+    padding: 0;
+    margin: 1.8rem;
+  }
+  .btn.striped-shadow span {
+    display: block;
+    position: relative;
+    z-index: 2;
+    border: 5px solid;
+  }
+  
+  .btn.striped-shadow.dark span {
+    border-color: #275070;
+    background: transparent;
+    color: #275070;
+  }
+  
+  .btn {
+    font-family: 'Bungee Shade', sans-serif;
+    height: 80px;
+    line-height: 65px;
+    display: inline-block;
+    letter-spacing: 1px;
+    position: relative;
+    font-size: 3.35rem;
+    transition: opacity .3s, z-index .3s step-end, -webkit-transform .3s;
+    transition: opacity .3s, z-index .3s step-end, transform .3s;
+    transition: opacity .3s,
+      z-index .3s step-end,
+      transform .3s,
+      -webkit-transform .3s;
+    z-index: 1;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .btn {
+    width: 300px;
+    height: 96px;
+    line-height: 83px;
+  }
+  
+ 
+  
+
+ .btn.striped-shadow.dark:after, .btn.striped-shadow.dark:before {
+    background-image: linear-gradient(
+      135deg,
+      transparent 0,
+      transparent 5px,
+      #275070 5px,
+      #275070 10px,
+      transparent 10px
+    );
+  }
+  
+  .btn.striped-shadow:hover:before {
+    max-height: calc(100% - 10px);
+  }
+  
+  .btn.striped-shadow:after {
+    width: calc(100% - 4px);
+    height: 8px;
+    left: -10px;
+    bottom: -9px;
+    background-size: 15px 8px;
+    background-repeat: repeat-x;
+  }
+    .btn.striped-shadow:after, .btn.striped-shadow:before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 1;
+    transition: max-height .3s, width .3s, -webkit-transform .3s;
+    transition: transform .3s, max-height .3s, width .3s;
+    transition: transform .3s, max-height .3s, width .3s, -webkit-transform .3s;
+  }
+  
+  .btn.striped-shadow:hover {
+    -webkit-transform: translate(-12px, 12px);
+    -ms-transform: translate(-12px, 12px);
+    transform: translate(-12px, 12px);
+    z-index: 3;
+  }
+  
+.btn.striped-shadow:hover:after, .btn.striped-shadow:hover:before {
+    -webkit-transform: translate(12px, -12px);
+    -ms-transform: translate(12px, -12px);
+    transform: translate(12px, -12px);
+  }
+  .btn.striped-shadow:before {
+    width: 8px;
+    max-height: calc(100% - 5px);
+    height: 100%;
+    left: -12px;
+    bottom: -5px;
+    background-size: 8px 15px;
+    background-repeat: repeat-y;
+    background-position: 0 100%;
+  }
+
+  #data {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -25px;
+    background-color: rgba(40, 81, 113, 0.1);
+    border-radius: 15px;
+  }
+
+  #mensagemVitoria{
+    font-size: 20px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.vtr{
+    justify-content: center;
+    align-items: center;
+}
+
+
+  @media (min-width: 860px){
+    body{
+        font-family: 'Rubik', sans-serif;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        color: #275070;
+    }
+    
+    header{
+        display: flex;
+        align-items: center;
+        justify-content: center;   
+        flex-wrap: wrap;
+    }
+    
+    .tituloH1{
+            width: 100%;
+            font-size: 55px;
+            font-family: 'Bungee Shade';
+            letter-spacing: 28px;
+            transition: all 2s ease-in;
+            border-bottom: 10px solid #275070;
+            line-height: 120px;
+            border-top: 10px solid #275070;
+            margin-top: 50px;
+    }
+    
+    .headerTitutlo {
+        transition: all ease 2s;       
+    }
+    
+    .teladastorres{
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-direction: row;
+    }
+    
+    #primeiraTorre {
+        margin-right: 0px;
+        margin-bottom: 0px;
+    }
+
+  
+    
+    #terceiraTorre {
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+    
+    h1{
+        font-family: 'Bungee Shade';
+        font-weight: 700;
+        font-size: 90px;
+        letter-spacing: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    main{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 100px;
+    }
+    
+    .movimentos{
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 25px;
+        width: 50px;
+        height: 55px;
+    }
+    
+    .textMoviments {
+        font-size: 23px;
+        margin-left: 0px;
+    }
+    
+    .inputDisk {
+        padding-left: 20px;
+        width: 40px;
+        height: 54px;
+        font-size: 25px;
+    }
+    
+    .dadosDaTorre{
+    border: 6px solid #275070;
+    border-radius: 20px;
+    display: none;
+    justify-content: space-around;
+    flex-direction: column;
+    }
+ 
+    .QtdDisks {
+        width: 250px;
+        height: 60px;
+        font-size: 20px;
+    }
+    
+    
+    .torres {
+        width: 26px;
+        height: 340px;
+    }
+    
+    .disco:hover {
+        transition: all ease 0.5s;
+        transform: translateY(-5px)
+    }
+    
+    .disco {
+        border: black solid 4px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+    
+    #disco0 {
+        width: 200px;
+        height: 30px;
+    }
+    
+    
+    #disco1 {
+        width: 170px;
+        height: 30px;
+    }
+    
+    #disco2 {
+        width: 140px;
+        height: 30px;
+    }
+    
+    #disco3 {
+        width: 110px;
+        height: 30px;
+    }
+    
+    #disco4 {
+        width: 80px;
+        height: 30px;
+    }
+    
+    #disco5 {
+        width: 50px;
+        height: 30px;
+    }
+    
+    #disco6 {
+        width: 30px;
+        height: 30px;
+    }
+    
+    #disco7 {
+        width: 30px;
+        height: 50px;
+    }
+    
+    .dificuldade{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+        border-radius: 10px;
+        margin:0px 40px 0px 40px;
+    }
+    
+  
+    
+    .qtdDisks{
+       width: 55px;
+       height: 55px;
+       cursor: pointer;
+       border: none;
+    }
+    
+    
+    .restart:disabled {
+        width: 200px;
+    }
+
+    .restart{
+        height: 80px;
+    }
+    
+    .striped-shadow {
+        overflow: visible;
+        border: 0;
+        padding: 0;
+        margin: 1.8rem;
+      }
+    
+      .btn {
+        margin-right: 0px;
+        font-size: 2.55rem;
+        width: 218px;
+        margin-right: 5px;
+        
+      }
+      
+      .btn:disabled {
+        height: 64px;
+      }
+
+      .btnStart{
+        width: 400px;
+        height: 192px;
+        line-height: 166px;
+      }
+      
+      #data {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(40, 81, 113, 0.4);
+        border-radius: 15px;
+      }
+
+      .indiceTorres {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            font-size: 35px;
+            font-weight: 700;
+
+      }
+
+      #mensagemVitoria{
+        font-size: 40px;
+        
+    }
+
+    .qtdDisksTotal{
+        margin-bottom: 15px;
+        font-size: 20px;
+        margin-top: 0px;
+    }    
+  }
+  
+
+  
